@@ -11,8 +11,8 @@ import profileRouter from "./Profile/profileRouter.js";
 import orderRouter from "./order/OrderRouter.js";
 
 const app = express()
-const PORT = 3200
-const DB_URL = 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net/?retryWrites=true&w=majority'
+const PORT =  process.env.PORT || 3200
+const DB_URL = process.env.MONGODB_URI
 
 app.use(cors({
     origin: "http://localhost:5173",
