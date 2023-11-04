@@ -12,7 +12,7 @@ import orderRouter from "./order/OrderRouter.js";
 
 const app = express()
 const PORT =  process.env.PORT || 3200
-const DB_URL = process.env.MONGODB_URI
+const DB_URL = process.env.MONGODB_URI || 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net/?retryWrites=true&w=majority'
 
 app.use(cors({
     origin: "http://localhost:5173",
