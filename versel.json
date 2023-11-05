@@ -1,8 +1,7 @@
-
 {
   "env": {
-    "URL_MONGODB": "YOUR_MONGODB_URL",
-    "PORT": "YOUR_PORT"
+    "URL_MONGODB": "mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net/?retryWrites=true&w=majority",
+    "PORT": "3200"
   },
 
   "version": 2,
