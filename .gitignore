@@ -8,3 +8,4 @@ node_modules/
 # Игнорировать файл secrets.txt
 secrets.txt
 
+.vercel
