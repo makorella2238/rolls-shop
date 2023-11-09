@@ -1,0 +1,9 @@
+services:
+  - name: client
+    env: static
+    dir: client
+  - name: server
+    env: node
+    dir: server
+    build: npm install
+    start: node index.js
