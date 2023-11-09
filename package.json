@@ -5,8 +5,8 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "node api/index.js",
-    "server:dev": "nodemon api/index.js",
+    "start": "node index.js",
+    "server:dev": "nodemon index.js",
     "vercel-build": "echo hello"
   },
   "author": "",
