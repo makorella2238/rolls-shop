@@ -1,9 +1,11 @@
 services:
-  - name: client
-    env: static
-    dir: client
-  - name: server
-    env: node
-    dir: server
-    build: npm install
-    start: node index.js
+  - type: web
+    name: my-express-app
+    env: python
+    repo: https://github.com/your-username/your-repo
+    branch: main
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MONGO_URL
+        value: 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net/?retryWrites=true&w=majority'
