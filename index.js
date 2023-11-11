@@ -16,7 +16,7 @@ const DB_URL = process.env.MONGODB_URI
 
 
 app.use(cors({
-    origin: "https://roll-shop.netlify.app/",
+    origin: "https://roll-shop.netlify.app",
     credentials: true
 }));
 
