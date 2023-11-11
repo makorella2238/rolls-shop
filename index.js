@@ -12,7 +12,7 @@ import profileRouter from "./Profile/profileRouter.js";
 
 const app = express()
 const PORT =  process.env.PORT || 3200
-const DB_URL = process.env.MONGODB_URI || 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net/?retryWrites=true&w=majority'
+const DB_URL = process.env.MONGODB_URI
 
 
 app.use(cors({
