@@ -15,8 +15,13 @@ const PORT =  process.env.PORT || 3200
 const DB_URL = process.env.MONGODB_URI
 
 
+const allowedOrigins = [
+    "https://roll-shop.netlify.app",
+    "http://localhost:5173"
+];
+
 app.use(cors({
-    origin: "https://roll-shop.netlify.app",
+    origin: allowedOrigins,
     credentials: true
 }));
 
