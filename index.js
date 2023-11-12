@@ -8,20 +8,15 @@ import cartRouter from "./cart/cartRouter.js";
 import favoriteRouter from "./favorite/favoriteRouter.js";
 import allItemsRouter from "./allItems/allItemsRouter.js";
 import profileRouter from "./Profile/profileRouter.js";
-//import orderRouter from "./order/OrderRouter.js";
+import orderRouter from "./order/OrderRouter.js";
 
 const app = express()
 const PORT =  process.env.PORT || 3200
-const DB_URL = process.env.MONGODB_URI
-
-
-const allowedOrigins = [
-    "https://roll-shop.netlify.app",
-    "http://localhost:5173"
-];
+const DB_URL = process.env.MONGODB_URI || 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net'
 
 app.use(cors({
-    origin: allowedOrigins,
+    origin: "https://roll-shop.netlify.app",
+    // origin: "http://localhost:5173",
     credentials: true
 }));
 
@@ -33,7 +28,7 @@ app.use(baseMenuURL, itemsRouter)
 app.use(baseMenuURL, menuRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/profile', profileRouter)
-//app.use('/api/order', orderRouter)
+app.use('/api/order', orderRouter)
 app.use('/api', cartRouter)
 app.use('/api', favoriteRouter)
 
