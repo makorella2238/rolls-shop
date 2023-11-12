@@ -8,7 +8,7 @@ import cartRouter from "./cart/cartRouter.js";
 import favoriteRouter from "./favorite/favoriteRouter.js";
 import allItemsRouter from "./allItems/allItemsRouter.js";
 import profileRouter from "./Profile/profileRouter.js";
-import orderRouter from "./Order/orderRouter";
+import orderRouter from "/Order/orderRouter";
 
 const app = express()
 const PORT =  process.env.PORT || 3200
