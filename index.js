@@ -14,14 +14,9 @@ const app = express()
 const PORT =  process.env.PORT || 3200
 const DB_URL = process.env.MONGODB_URI
 
-
-const allowedOrigins = [
-    "https://roll-shop.netlify.app",
-    "http://localhost:5173"
-];
-
 app.use(cors({
-    origin: allowedOrigins,
+    origin: "https://roll-shop.netlify.app",
+    // origin: "http://localhost:5173",
     credentials: true
 }));
 
