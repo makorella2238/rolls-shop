@@ -8,7 +8,7 @@ import cartRouter from "./cart/cartRouter.js";
 import favoriteRouter from "./favorite/favoriteRouter.js";
 import allItemsRouter from "./allItems/allItemsRouter.js";
 import profileRouter from "./Profile/profileRouter.js";
-import orderRouter from "./order/OrderRouter.js";
+import orderRouter from "./Order/orderRouter.js";
 
 const app = express()
 const PORT =  process.env.PORT || 3200
@@ -23,12 +23,12 @@ app.use(cors({
 const baseMenuURL = '/api/menu'
 
 app.use(express.json())
+app.use('/api/order', orderRouter)
 app.use(baseMenuURL + '/all', allItemsRouter)
 app.use(baseMenuURL, itemsRouter)
 app.use(baseMenuURL, menuRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/profile', profileRouter)
-app.use('/api/order', orderRouter)
 app.use('/api', cartRouter)
 app.use('/api', favoriteRouter)
 
