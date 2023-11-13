@@ -16,28 +16,29 @@ class RollController {
             };
 
             const categoryId = Number(req.query.category);
-            let items;
+            let items = [];
+            let category = '';
 
             switch (categoryId) {
                 case MenuCategory.ROLLS:
+                    category = 'Rolls';
                     items = await Rolls.find();
-                    res.status(200).send({ category: 'Rolls', items });
                     break;
                 case MenuCategory.PIZZAS:
+                    category = 'Pizzas';
                     items = await Pizzas.find();
-                    res.status(200).send({ category: 'Pizzas', items });
                     break;
                 case MenuCategory.DESSERTS:
+                    category = 'Desserts';
                     items = await Desserts.find();
-                    res.status(200).send({ category: 'Desserts', items });
                     break;
                 case MenuCategory.SOUPS:
+                    category = 'Soups';
                     items = await Soups.find();
-                    res.status(200).send({ category: 'Soups', items });
                     break;
                 case MenuCategory.DRINKS:
+                    category = 'Drinks';
                     items = await Drinks.find();
-                    res.status(200).send({ category: 'Drinks', items });
                     break;
                 default:
                     res.status(404).send('Неверный ID категории');
