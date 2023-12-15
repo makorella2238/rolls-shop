@@ -1,6 +1,6 @@
-import User from "../models/User.js";
-import Order from "../models/Order.js";
-import Profile from "../models/Profile.js";
+import User from "../../models/User.js";
+import Order from "../../models/Order.js";
+import Profile from "../../models/Profile.js";
 
 class orderController {
 

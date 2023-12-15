@@ -1,10 +1,9 @@
 import {Router} from "express";
-import controller from './menuController.js'
+import controller from './carsController.js'
 
 const router = Router()
 
 router.get('/', controller.getAll)
-router.get('/items', controller.getAllItems)
 router.get('/:id', controller.findOne)
 router.post('/', controller.create)
 router.delete('/:id', controller.delete)

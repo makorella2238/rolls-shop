@@ -1,4 +1,4 @@
-import {secret} from "../config.js";
+import {secret} from "../../config.js";
 import jwt from "jsonwebtoken";
 
 export const authMiddleware = (req, res, next) => {

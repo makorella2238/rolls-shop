@@ -1,9 +1,9 @@
 import bcrypt from 'bcryptjs'
-import Role from "../models/Role.js";
+import Role from "../../models/Role.js";
 import jwt from "jsonwebtoken"
 import {validationResult} from 'express-validator'
-import {secret} from '../config.js'
-import User from "../models/User.js";
+import {secret} from '../../config.js'
+import User from "../../models/User.js";
 
 const generateSuccessToken = (id, roles, username) => {
     const payload = {

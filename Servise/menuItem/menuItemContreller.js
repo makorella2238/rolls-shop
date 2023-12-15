@@ -1,9 +1,9 @@
-import Rolls from "../models/MenuItem/Rolls.js";
-import Pizzas from "../models/MenuItem/Pizzas.js";
-import Desserts from "../models/MenuItem/Desserts.js";
-import Drinks from "../models/MenuItem/Drinks.js";
-import Soups from "../models/MenuItem/Soups.js";
-import Roll from "../models/MenuItem/Rolls.js";
+import Rolls from "../../models/MenuItem/Rolls.js";
+import Pizzas from "../../models/MenuItem/Pizzas.js";
+import Desserts from "../../models/MenuItem/Desserts.js";
+import Drinks from "../../models/MenuItem/Drinks.js";
+import Soups from "../../models/MenuItem/Soups.js";
+import Roll from "../../models/MenuItem/Rolls.js";
 
 class rollController {
     async getAll(req, res) {

@@ -1,5 +1,5 @@
-import Cart from "../models/Cart.js";
-import User from "../models/User.js";
+import Cart from "../../models/Cart.js";
+import User from "../../models/User.js";
 
 class cartController {
 

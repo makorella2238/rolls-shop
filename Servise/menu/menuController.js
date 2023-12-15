@@ -1,9 +1,9 @@
-import Catalog from "../models/Menu.js";
-import Desserts from "../models/MenuItem/Desserts.js";
-import Drinks from "../models/MenuItem/Drinks.js";
-import Pizzas from "../models/MenuItem/Pizzas.js";
-import Rolls from "../models/MenuItem/Rolls.js";
-import Soups from "../models/MenuItem/Soups.js";
+import Catalog from "../../models/Menu.js";
+import Desserts from "../../models/MenuItem/Desserts.js";
+import Drinks from "../../models/MenuItem/Drinks.js";
+import Pizzas from "../../models/MenuItem/Pizzas.js";
+import Rolls from "../../models/MenuItem/Rolls.js";
+import Soups from "../../models/MenuItem/Soups.js";
 
 class menuController {
     async getAll(req, res) {
@@ -52,19 +52,6 @@ class menuController {
             res.json(catalog)
         } catch (e) {
             res.status(400).json({message: "Меню с указанным ID не был найден"})
-        }
-    }
-    async getAllItems(req, res) {
-        try {
-            const desserts = await Desserts.find()
-            const drinks = await Drinks.find()
-            const pizzas = await Pizzas.find()
-            const rolls = await Rolls.find()
-            const soups = await Soups.find()
-            const allItems = desserts.concat(drinks, pizzas, rolls, soups)
-            res.json(allItems)
-        } catch (e) {
-            console.log(e)
         }
     }
 }
