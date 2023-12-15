@@ -17,7 +17,6 @@ const DB_URL = process.env.MONGODB_URI || 'mongodb+srv://makorella:makorella2238
 
 app.use(cors({
     origin: "https://roll-shop.netlify.app",
-    //origin: "http://localhost:3000",
     credentials: true
 }));
 
