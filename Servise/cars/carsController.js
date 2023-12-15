@@ -1,15 +1,11 @@
 import Catalog from "../../models/Menu.js";
-import Desserts from "../../models/MenuItem/Desserts.js";
-import Drinks from "../../models/MenuItem/Drinks.js";
-import Pizzas from "../../models/MenuItem/Pizzas.js";
-import Rolls from "../../models/MenuItem/Rolls.js";
-import Soups from "../../models/MenuItem/Soups.js";
+import Car from "../../models/Car.js";
 
-class menuController {
+class carsController {
     async getAll(req, res) {
         try {
-            const catalogs = await Catalog.find()
-            res.json(catalogs)
+            const cars = await Car.find()
+            res.json(cars)
         } catch (e) {
             console.log(e)
         }
@@ -17,8 +13,8 @@ class menuController {
 
     async delete(req, res) {
         try {
-            const catalog = await Catalog.findByIdAndDelete(req.params.id); // Найти ролл и удалить ролл
-            if (!catalog) {
+            const car = await Car.findByIdAndDelete(req.params.id); // Найти ролл и удалить ролл
+            if (!car) {
                 return res.status(404).json({ message: "Меню с таким ID не был найден" });
             }
             return (
@@ -31,9 +27,9 @@ class menuController {
 
     async create(req, res) {
         try {
-            const {img, title} = req.body
-            const catalog = new Catalog({img, title})
-            await catalog.save()
+            const {img, title, price} = req.body
+            const car = new Car({img, title, price})
+            await car.save()
             return res.json('Меню был успешно сохранено')
         } catch (e) {
             res.status(400).json({message: "Меню с таким именем уже есть"})
@@ -48,12 +44,12 @@ class menuController {
             if (!id) {
                 return res.status(400).json({message: "Вы не указали ID меню"})
             }
-            const catalog = await Catalog.findById(id)
-            res.json(catalog)
+            const car = await Car.findById(id)
+            res.json(car)
         } catch (e) {
             res.status(400).json({message: "Меню с указанным ID не был найден"})
         }
     }
 }
 
-export default new menuController()
+export default new carsController()

@@ -1,9 +1,4 @@
 import Catalog from "../../models/Menu.js";
-import Desserts from "../../models/MenuItem/Desserts.js";
-import Drinks from "../../models/MenuItem/Drinks.js";
-import Pizzas from "../../models/MenuItem/Pizzas.js";
-import Rolls from "../../models/MenuItem/Rolls.js";
-import Soups from "../../models/MenuItem/Soups.js";
 
 class menuController {
     async getAll(req, res) {
