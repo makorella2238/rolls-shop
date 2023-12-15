@@ -16,8 +16,8 @@ const PORT =  process.env.PORT || 3200
 const DB_URL = process.env.MONGODB_URI || 'mongodb+srv://makorella:makorella2238@cluster1.kryzgko.mongodb.net'
 
 app.use(cors({
-    //origin: "https://roll-shop.netlify.app",
-    origin: "http://localhost:3000",
+    origin: "https://roll-shop.netlify.app",
+    //origin: "http://localhost:3000",
     credentials: true
 }));
 
