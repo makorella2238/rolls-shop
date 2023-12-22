@@ -1,4 +1,3 @@
-import Catalog from "../../models/Menu.js";
 import Car from "../../models/Car.js";
 
 class carsController {
@@ -38,8 +37,8 @@ class carsController {
 
     async create(req, res) {
         try {
-            const {img, title, price} = req.body
-            const car = new Car({img, title, price})
+            const {img, title, price, brand} = req.body
+            const car = new Car({img, title, price, brand})
             await car.save()
             return res.json('Меню был успешно сохранено')
         } catch (e) {
