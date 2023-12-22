@@ -10,6 +10,17 @@ class carsController {
             console.log(e)
         }
     }
+    async getBrands(req, res) {
+        try {
+            // Используем метод distinct для получения уникальных марок машин
+            const brands = await Car.distinct("brand");
+            res.json(brands);
+        } catch (e) {
+            console.log(e);
+            res.status(500).json({ error: "Failed to get brands" });
+        }
+    }
+
 
     async delete(req, res) {
         try {
