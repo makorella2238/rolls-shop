@@ -1,4 +1,3 @@
-import Catalog from "../../models/Menu.js";
 import Car from "../../models/Car.js";
 
 class carsController {
